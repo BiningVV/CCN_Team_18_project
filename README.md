@@ -97,9 +97,9 @@ wget https://raw.githubusercontent.com/OpenNetLab/AlphaRTC/main/examples/peercon
 #### We can see files in the BoB folder
 
 # Running BoB model
-- First build the environment in environment folder by `make all`
+- First, build the environment in the environment folder by `make all`
 - run ./run_with_tc in the parent folder.
-- This will create results folders with audio files, graphs and log files.
+- This will create results folders with audio files, graphs, and log files.
 
 # Traffic Profiles in BoB Model Experiment
 
@@ -114,14 +114,15 @@ In the BoB model experiment, various traffic profiles are used to evaluate the m
 These profiles represent different network scenarios commonly encountered in real-world RTC applications. By testing the BoB model on these profiles, researchers can evaluate its ability to adapt to diverse network conditions and ensure accurate bandwidth prediction for various applications.
 
 # Results
-- We get 4 results folders one for each model and each folder contain audio.wav,audio.json, bandwidth_estimator.log and graph files.
-- Log file will have the content of actual bandwidth and estimated bandwidth along with weather the heauristic model is used or not.
+- We get 4 results folders one for each model and each folder contains audio.wav,audio.json, bandwidth_estimator.log, and graph files.
+- The log file will have the content of actual bandwidth and estimated bandwidth along with whether the heuristic model is used or not.
+- Sample results for all models and traffic profiles are given in the sample_results folder.
 
 # Notes
 ## script (run_with_tc.sh)
-- run_with_tc.sh is a shell script which handles whole execution of project.
+- run_with_tc.sh is a shell script that handles the whole execution of the project.
 - Traffic profiles of lte_profile_x0.25 cascade_profile_x0.25 twitch_profile_x0.25 FCCamazone_x0.25 Synthtic_x0.25 are used for execution.
-- The script runs for bob, gemini, heuristic and hrcc models.
+- The script runs for Bob, Gemini, heuristic, and hrcc models.
 
 ## Issues
 - Phantom container blocking to create new container then use rm command to remove the container which it gives in terminal
