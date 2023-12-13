@@ -1,0 +1,706 @@
+(field_trial.cc:140): Setting field trial string:WebRTC-KeepAbsSendTimeExtension/Enabled/
+(audio_processing_impl.cc:272): Injected APM submodules:
+Echo control factory: 0
+Echo detector: 0
+Capture analyzer: 0
+Capture post processor: 0
+Render pre processor: 0
+(webrtc_voice_engine.cc:206): WebRtcVoiceEngine::WebRtcVoiceEngine
+(webrtc_video_engine.cc:572): WebRtcVideoEngine::WebRtcVideoEngine()
+(webrtc_voice_engine.cc:228): WebRtcVoiceEngine::Init
+(webrtc_voice_engine.cc:315): WebRtcVoiceEngine::ApplyOptions: AudioOptions {aec: 1, agc: 1, ns: 1, hf: 1, swap: 0, audio_jitter_buffer_max_packets: 200, audio_jitter_buffer_fast_accelerate: 0, audio_jitter_buffer_min_delay_ms: 0, audio_jitter_buffer_enable_rtx_handling: 0, typing: 1, experimental_agc: 0, experimental_ns: 0, residual_echo_detector: 1, }
+(webrtc_voice_engine.cc:431): Stereo swapping enabled? 0
+(webrtc_voice_engine.cc:436): NetEq capacity is 200
+(webrtc_voice_engine.cc:442): NetEq fast mode? 0
+(webrtc_voice_engine.cc:448): NetEq minimum delay is 0
+(webrtc_voice_engine.cc:454): NetEq handle reordered packets? 0
+(webrtc_voice_engine.cc:474): Experimental ns is enabled? 0
+(webrtc_voice_engine.cc:525): NS set to 1
+(webrtc_voice_engine.cc:529): Typing detection is enabled? 1
+(audio_processing_impl.cc:526): AudioProcessing::ApplyConfig: AudioProcessing::Config{ pipeline: {maximum_internal_processing_rate: 48000, multi_channel_render: 0, , multi_channel_capture: 0}, pre_amplifier: { enabled: 0, fixed_gain_factor: 1 }, high_pass_filter: { enabled: 1 }, echo_canceller: { enabled: 1, mobile_mode: 0, enforce_high_pass_filtering: 1 }, noise_suppression: { enabled: 1, level: High }, transient_suppression: { enabled: 0 }, voice_detection: { enabled: 1 }, gain_controller1: { enabled: 1, mode: AdaptiveAnalog, target_level_dbfs: 3, compression_gain_db: 9, enable_limiter: 1, analog_level_minimum: 0, analog_level_maximum: 255 }, gain_controller2: { enabled: 0, fixed_digital: { gain_db: 0 }, adaptive_digital: { enabled: 0, level_estimator: Rms, use_saturation_protector: 1, extra_saturation_margin_db: 2 } }, residual_echo_detector: { enabled: 1 }, level_estimation: { enabled: 0 } }
+(agc_manager_direct.cc:69): [agc] GetMinMicLevel
+(agc_manager_direct.cc:73): [agc] Using default min mic level: 12
+(rtc_event_log_impl.cc:43): Creating legacy encoder for RTC event log.
+(peer_connection_factory.cc:391): Using default network controller factory
+(bitrate_prober.cc:69): Bandwidth probing enabled, set to inactive
+(paced_sender.cc:176): ProcessThreadAttached 0xc00717e0
+(cpu_info.cc:53): Available number of cores: 8
+(aimd_rate_control.cc:113): Using aimd rate control with back off factor 0.85
+(remote_bitrate_estimator_single_stream.cc:72): RemoteBitrateEstimatorSingleStream: Instantiating.
+(remote_estimator_proxy.cc:69): Maximum interval between transport feedback RTCP messages (ms): 250
+(openssl_identity.cc:43): Making key pair
+(peer_connection.cc:1610): Adding audio transceiver in response to a call to AddTrack.
+(peer_connection.cc:1610): Adding video transceiver in response to a call to AddTrack.
+(openssl_identity.cc:91): Returning key pair
+(openssl_certificate.cc:59): Making certificate for WebRTC
+(webrtc_sdp.cc:3316): Ignored line: a=rtcp:9 IN IP4 0.0.0.0
+(openssl_certificate.cc:109): Returning certificate
+(webrtc_sdp.cc:3316): Ignored line: a=rtcp:9 IN IP4 0.0.0.0
+(conductor.cc:405):  Received session description :{
+   "sdp" : "v=0\r\no=- 2661958273349044410 2 IN IP4 127.0.0.1\r\ns=-\r\nt=0 0\r\na=group:BUNDLE 0 1\r\na=msid-semantic: WMS stream_id\r\nm=audio 9 UDP/TLS/RTP/SAVPF 111 103 104 9 102 0 8 106 105 13 110 112 113 126\r\nc=IN IP4 0.0.0.0\r\na=rtcp:9 IN IP4 0.0.0.0\r\na=ice-ufrag:A5sD\r\na=ice-pwd:KYKG0L/WdL9dhhYEOofPn8aO\r\na=ice-options:trickle\r\na=fingerprint:sha-256 68:E7:B8:DD:27:FC:41:F7:E1:B4:C1:B3:1F:FC:34:2E:69:F1:F1:2A:A1:03:0D:C5:D0:C2:D9:75:AC:F4:DE:E2\r\na=setup:actpass\r\na=mid:0\r\na=extmap:1 urn:ietf:params:rtp-hdrext:ssrc-audio-level\r\na=extmap:2 http://www.webrtc.org/experiments/rtp-hdrext/abs-send-time\r\na=extmap:3 http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01\r\na=extmap:4 urn:ietf:params:rtp-hdrext:sdes:mid\r\na=extmap:5 urn:ietf:params:rtp-hdrext:sdes:rtp-stream-id\r\na=extmap:6 urn:ietf:params:rtp-hdrext:sdes:repaired-rtp-stream-id\r\na=sendrecv\r\na=msid:stream_id audio_label\r\na=rtcp-mux\r\na=rtpmap:111 opus/48000/2\r\na=rtcp-fb:111 transport-cc\r\na=fmtp:111 minptime=10;useinbandfec=1\r\na=rtpmap:103 ISAC/16000\r\na=rtpmap:104 ISAC/32000\r\na=rtpmap:9 G722/8000\r\na=rtpmap:102 ILBC/8000\r\na=rtpmap:0 PCMU/8000\r\na=rtpmap:8 PCMA/8000\r\na=rtpmap:106 CN/32000\r\na=rtpmap:105 CN/16000\r\na=rtpmap:13 CN/8000\r\na=rtpmap:110 telephone-event/48000\r\na=rtpmap:112 telephone-event/32000\r\na=rtpmap:113 telephone-event/16000\r\na=rtpmap:126 telephone-event/8000\r\na=ssrc:375751647 cname:MvW+B1MXma0p9k5Z\r\na=ssrc:375751647 msid:stream_id audio_label\r\na=ssrc:375751647 mslabel:stream_id\r\na=ssrc:375751647 label:audio_label\r\nm=video 9 UDP/TLS/RTP/SAVPF 96 97 98 99 100 101 127 123 125 122 124\r\nc=IN IP4 0.0.0.0\r\na=rtcp:9 IN IP4 0.0.0.0\r\na=ice-ufrag:A5sD\r\na=ice-pwd:KYKG0L/WdL9dhhYEOofPn8aO\r\na=ice-options:trickle\r\na=fingerprint:sha-256 68:E7:B8:DD:27:FC:41:F7:E1:B4:C1:B3:1F:FC:34:2E:69:F1:F1:2A:A1:03:0D:C5:D0:C2:D9:75:AC:F4:DE:E2\r\na=setup:actpass\r\na=mid:1\r\na=extmap:14 urn:ietf:params:rtp-hdrext:toffset\r\na=extmap:2 http://www.webrtc.org/experiments/rtp-hdrext/abs-send-time\r\na=extmap:13 urn:3gpp:video-orientation\r\na=extmap:3 http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01\r\na=extmap:12 http://www.webrtc.org/experiments/rtp-hdrext/playout-delay\r\na=extmap:11 http://www.webrtc.org/experiments/rtp-hdrext/video-content-type\r\na=extmap:7 http://www.webrtc.org/experiments/rtp-hdrext/video-timing\r\na=extmap:8 http://tools.ietf.org/html/draft-ietf-avtext-framemarking-07\r\na=extmap:9 http://www.webrtc.org/experiments/rtp-hdrext/color-space\r\na=extmap:4 urn:ietf:params:rtp-hdrext:sdes:mid\r\na=extmap:5 urn:ietf:params:rtp-hdrext:sdes:rtp-stream-id\r\na=extmap:6 urn:ietf:params:rtp-hdrext:sdes:repaired-rtp-stream-id\r\na=sendrecv\r\na=msid:stream_id video_label\r\na=rtcp-mux\r\na=rtcp-rsize\r\na=rtpmap:96 VP8/90000\r\na=rtcp-fb:96 goog-remb\r\na=rtcp-fb:96 transport-cc\r\na=rtcp-fb:96 ccm fir\r\na=rtcp-fb:96 nack\r\na=rtcp-fb:96 nack pli\r\na=rtpmap:97 rtx/90000\r\na=fmtp:97 apt=96\r\na=rtpmap:98 VP9/90000\r\na=rtcp-fb:98 goog-remb\r\na=rtcp-fb:98 transport-cc\r\na=rtcp-fb:98 ccm fir\r\na=rtcp-fb:98 nack\r\na=rtcp-fb:98 nack pli\r\na=fmtp:98 profile-id=0\r\na=rtpmap:99 rtx/90000\r\na=fmtp:99 apt=98\r\na=rtpmap:100 VP9/90000\r\na=rtcp-fb:100 goog-remb\r\na=rtcp-fb:100 transport-cc\r\na=rtcp-fb:100 ccm fir\r\na=rtcp-fb:100 nack\r\na=rtcp-fb:100 nack pli\r\na=fmtp:100 profile-id=2\r\na=rtpmap:101 rtx/90000\r\na=fmtp:101 apt=100\r\na=rtpmap:127 AV1X/90000\r\na=rtcp-fb:127 goog-remb\r\na=rtcp-fb:127 transport-cc\r\na=rtcp-fb:127 ccm fir\r\na=rtcp-fb:127 nack\r\na=rtcp-fb:127 nack pli\r\na=rtpmap:123 rtx/90000\r\na=fmtp:123 apt=127\r\na=rtpmap:125 red/90000\r\na=rtpmap:122 rtx/90000\r\na=fmtp:122 apt=125\r\na=rtpmap:124 ulpfec/90000\r\na=ssrc-group:FID 3460464873 2592369340\r\na=ssrc:3460464873 cname:MvW+B1MXma0p9k5Z\r\na=ssrc:3460464873 msid:stream_id video_label\r\na=ssrc:3460464873 mslabel:stream_id\r\na=ssrc:3460464873 label:video_label\r\na=ssrc:2592369340 cname:MvW+B1MXma0p9k5Z\r\na=ssrc:2592369340 msid:stream_id video_label\r\na=ssrc:2592369340 mslabel:stream_id\r\na=ssrc:2592369340 label:video_label\r\n",
+   "type" : "offer"
+}
+
+(p2p_transport_channel.cc:526): Set backup connection ping interval to 25000 milliseconds.
+(p2p_transport_channel.cc:535): Set ICE receiving timeout to 2500 milliseconds
+(p2p_transport_channel.cc:542): Set ping most likely connection to 0
+(p2p_transport_channel.cc:549): Set stable_writable_connection_ping_interval to 2500
+(p2p_transport_channel.cc:562): Set presume writable when fully relayed to 0
+(p2p_transport_channel.cc:580): Set regather_on_failed_networks_interval to 300000
+(p2p_transport_channel.cc:587): Set receiving_switching_delay to 1000
+(jsep_transport_controller.cc:1215): Creating DtlsSrtpTransport.
+(dtls_srtp_transport.cc:62): Setting RTCP Transport on 0 transport 0
+(dtls_srtp_transport.cc:67): Setting RTP Transport on 0 transport c8003800
+(p2p_transport_channel.cc:526): Set backup connection ping interval to 25000 milliseconds.
+(p2p_transport_channel.cc:535): Set ICE receiving timeout to 2500 milliseconds
+(p2p_transport_channel.cc:542): Set ping most likely connection to 0
+(p2p_transport_channel.cc:549): Set stable_writable_connection_ping_interval to 2500
+(p2p_transport_channel.cc:562): Set presume writable when fully relayed to 0
+(p2p_transport_channel.cc:580): Set regather_on_failed_networks_interval to 300000
+(p2p_transport_channel.cc:587): Set receiving_switching_delay to 1000
+(jsep_transport_controller.cc:1215): Creating DtlsSrtpTransport.
+(dtls_srtp_transport.cc:62): Setting RTCP Transport on 1 transport 0
+(dtls_srtp_transport.cc:67): Setting RTP Transport on 1 transport c80061c0
+(p2p_transport_channel.cc:471): Received remote ICE parameters: ufrag=A5sD, renomination disabled
+(p2p_transport_channel.cc:471): Received remote ICE parameters: ufrag=A5sD, renomination disabled
+(webrtc_voice_engine.cc:1495): Setting voice channel options: AudioOptions {audio_jitter_buffer_max_packets: 200, audio_jitter_buffer_fast_accelerate: 0, audio_jitter_buffer_min_delay_ms: 0, audio_jitter_buffer_enable_rtx_handling: 0, }
+(webrtc_voice_engine.cc:315): WebRtcVoiceEngine::ApplyOptions: AudioOptions {audio_jitter_buffer_max_packets: 200, audio_jitter_buffer_fast_accelerate: 0, audio_jitter_buffer_min_delay_ms: 0, audio_jitter_buffer_enable_rtx_handling: 0, }
+(webrtc_voice_engine.cc:436): NetEq capacity is 200
+(webrtc_voice_engine.cc:442): NetEq fast mode? 0
+(webrtc_voice_engine.cc:448): NetEq minimum delay is 0
+(webrtc_voice_engine.cc:454): NetEq handle reordered packets? 0
+(webrtc_voice_engine.cc:474): Experimental ns is enabled? 0
+(audio_processing_impl.cc:526): AudioProcessing::ApplyConfig: AudioProcessing::Config{ pipeline: {maximum_internal_processing_rate: 48000, multi_channel_render: 0, , multi_channel_capture: 0}, pre_amplifier: { enabled: 0, fixed_gain_factor: 1 }, high_pass_filter: { enabled: 1 }, echo_canceller: { enabled: 1, mobile_mode: 0, enforce_high_pass_filtering: 1 }, noise_suppression: { enabled: 1, level: High }, transient_suppression: { enabled: 0 }, voice_detection: { enabled: 1 }, gain_controller1: { enabled: 1, mode: AdaptiveAnalog, target_level_dbfs: 3, compression_gain_db: 9, enable_limiter: 1, analog_level_minimum: 0, analog_level_maximum: 255 }, gain_controller2: { enabled: 0, fixed_digital: { gain_db: 0 }, adaptive_digital: { enabled: 0, level_estimator: Rms, use_saturation_protector: 1, extra_saturation_margin_db: 2 } }, residual_echo_detector: { enabled: 1 }, level_estimation: { enabled: 0 } }
+(webrtc_voice_engine.cc:1513): Set voice channel options. Current options: AudioOptions {audio_jitter_buffer_max_packets: 200, audio_jitter_buffer_fast_accelerate: 0, audio_jitter_buffer_min_delay_ms: 0, audio_jitter_buffer_enable_rtx_handling: 0, }
+(channel.cc:145): Created channel for 0
+(webrtc_video_engine.cc:585): CreateMediaChannel. Options: VideoOptions {}
+(channel.cc:145): Created channel for 1
+(peer_connection.cc:4794): Session: 3184752886899679765 Old state: kStable New state: kHaveRemoteOffer
+(channel.cc:881): Setting remote voice description
+(webrtc_voice_engine.cc:1311): WebRtcVoiceMediaChannel::SetSendParameters: {codecs: [AudioCodec[111:opus:48000:0:2], AudioCodec[103:ISAC:16000:0:1], AudioCodec[104:ISAC:32000:0:1], AudioCodec[9:G722:8000:0:1], AudioCodec[102:ILBC:8000:0:1], AudioCodec[0:PCMU:8000:0:1], AudioCodec[8:PCMA:8000:0:1], AudioCodec[106:CN:32000:0:1], AudioCodec[105:CN:16000:0:1], AudioCodec[13:CN:8000:0:1], AudioCodec[110:telephone-event:48000:0:1], AudioCodec[112:telephone-event:32000:0:1], AudioCodec[113:telephone-event:16000:0:1], AudioCodec[126:telephone-event:8000:0:1]], extensions: [{uri: urn:ietf:params:rtp-hdrext:ssrc-audio-level, id: 1}, {uri: http://www.webrtc.org/experiments/rtp-hdrext/abs-send-time, id: 2}, {uri: http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01, id: 3}, {uri: urn:ietf:params:rtp-hdrext:sdes:mid, id: 4}, {uri: urn:ietf:params:rtp-hdrext:sdes:rtp-stream-id, id: 5}, {uri: urn:ietf:params:rtp-hdrext:sdes:repaired-rtp-stream-id, id: 6}], extmap-allow-mixed: false, max_bandwidth_bps: -1, mid: 0, options: AudioOptions {}}
+(webrtc_voice_engine.cc:1712): Recreate all the receive streams because the send codec has changed.
+(webrtc_voice_engine.cc:2169): WebRtcVoiceMediaChannel::SetMaxSendBitrate.
+(webrtc_voice_engine.cc:1495): Setting voice channel options: AudioOptions {}
+(webrtc_voice_engine.cc:315): WebRtcVoiceEngine::ApplyOptions: AudioOptions {audio_jitter_buffer_max_packets: 200, audio_jitter_buffer_fast_accelerate: 0, audio_jitter_buffer_min_delay_ms: 0, audio_jitter_buffer_enable_rtx_handling: 0, }
+(webrtc_voice_engine.cc:436): NetEq capacity is 200
+(webrtc_voice_engine.cc:442): NetEq fast mode? 0
+(webrtc_voice_engine.cc:448): NetEq minimum delay is 0
+(webrtc_voice_engine.cc:454): NetEq handle reordered packets? 0
+(webrtc_voice_engine.cc:474): Experimental ns is enabled? 0
+(audio_processing_impl.cc:526): AudioProcessing::ApplyConfig: AudioProcessing::Config{ pipeline: {maximum_internal_processing_rate: 48000, multi_channel_render: 0, , multi_channel_capture: 0}, pre_amplifier: { enabled: 0, fixed_gain_factor: 1 }, high_pass_filter: { enabled: 1 }, echo_canceller: { enabled: 1, mobile_mode: 0, enforce_high_pass_filtering: 1 }, noise_suppression: { enabled: 1, level: High }, transient_suppression: { enabled: 0 }, voice_detection: { enabled: 1 }, gain_controller1: { enabled: 1, mode: AdaptiveAnalog, target_level_dbfs: 3, compression_gain_db: 9, enable_limiter: 1, analog_level_minimum: 0, analog_level_maximum: 255 }, gain_controller2: { enabled: 0, fixed_digital: { gain_db: 0 }, adaptive_digital: { enabled: 0, level_estimator: Rms, use_saturation_protector: 1, extra_saturation_margin_db: 2 } }, residual_echo_detector: { enabled: 1 }, level_estimation: { enabled: 0 } }
+(webrtc_voice_engine.cc:1513): Set voice channel options. Current options: AudioOptions {audio_jitter_buffer_max_packets: 200, audio_jitter_buffer_fast_accelerate: 0, audio_jitter_buffer_min_delay_ms: 0, audio_jitter_buffer_enable_rtx_handling: 0, }
+(webrtc_voice_engine.cc:1859): AddRecvStream: {id:audio_label;ssrcs:[375751647];ssrc_groups:;cname:MvW+B1MXma0p9k5Z;stream_ids:stream_id;}
+(delay_manager.cc:73): Delay histogram config: quantile=1041529569 forget_factor=32745 start_forget_weight=2
+(decision_logic.cc:55): NetEq decision logic settings: estimate_dtx_delay=0 time_stretch_cn=0 target_level_window_ms=100
+(neteq_impl.cc:144): NetEq config: sample_rate_hz=16000, enable_post_decode_vad=true, max_packets_in_buffer=200, min_delay_ms=0, enable_fast_accelerate=false, enable_muted_state=true, enable_rtx_handling=false
+(audio_receive_stream.cc:123): AudioReceiveStream: 375751647
+(audio_receive_stream.cc:380): AudioReceiveStream::ConfigureStream: {rtp: {remote_ssrc: 375751647, local_ssrc: 4195875351, transport_cc: on, nack: {rtp_history_ms: 0}, extensions: []}, rtcp_send_transport: (Transport), sync_group: stream_id}
+(channel.cc:681): Add remote ssrc: 375751647
+(channel.cc:816): Changing voice state, recv=0 send=0
+(channel.cc:1064): Setting remote video description
+(webrtc_video_engine.cc:808): SetSendParameters: {codecs: [VideoCodec[96:VP8], VideoCodec[97:rtx], VideoCodec[98:VP9], VideoCodec[99:rtx], VideoCodec[100:VP9], VideoCodec[101:rtx], VideoCodec[127:AV1X], VideoCodec[123:rtx], VideoCodec[125:red], VideoCodec[122:rtx], VideoCodec[124:ulpfec]], conference_mode: no, extensions: [{uri: urn:ietf:params:rtp-hdrext:toffset, id: 14}, {uri: http://www.webrtc.org/experiments/rtp-hdrext/abs-send-time, id: 2}, {uri: urn:3gpp:video-orientation, id: 13}, {uri: http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01, id: 3}, {uri: http://www.webrtc.org/experiments/rtp-hdrext/playout-delay, id: 12}, {uri: http://www.webrtc.org/experiments/rtp-hdrext/video-content-type, id: 11}, {uri: http://www.webrtc.org/experiments/rtp-hdrext/video-timing, id: 7}, {uri: http://tools.ietf.org/html/draft-ietf-avtext-framemarking-07, id: 8}, {uri: http://www.webrtc.org/experiments/rtp-hdrext/color-space, id: 9}, {uri: urn:ietf:params:rtp-hdrext:sdes:mid, id: 4}, {uri: urn:ietf:params:rtp-hdrext:sdes:rtp-stream-id, id: 5}, {uri: urn:ietf:params:rtp-hdrext:sdes:repaired-rtp-stream-id, id: 6}], extmap-allow-mixed: false, max_bandwidth_bps: -1, mid: 1}
+(webrtc_video_engine.cc:751): WebRTC-FlexFEC-03 field trial is not enabled.
+(webrtc_video_engine.cc:816): Negotiated codec: VideoCodec[96:VP8]
+(webrtc_video_engine.cc:816): Negotiated codec: VideoCodec[98:VP9]
+(webrtc_video_engine.cc:816): Negotiated codec: VideoCodec[100:VP9]
+(webrtc_video_engine.cc:816): Negotiated codec: VideoCodec[127:AV1X]
+(webrtc_video_engine.cc:977): SetFeedbackOptions on all the receive streams because the send codec or RTCP mode has changed.
+(webrtc_video_engine.cc:1383): AddRecvStream: {id:video_label;ssrcs:[3460464873,2592369340];ssrc_groups:{semantics:FID;ssrcs:[3460464873,2592369340]};cname:MvW+B1MXma0p9k5Z;stream_ids:stream_id;}
+(video_receive_stream2.cc:228): VideoReceiveStream2: {decoders: [{payload_type: 96, payload_name: VP8, codec_params: {}}, {payload_type: 98, payload_name: VP9, codec_params: {profile-id: 0}}, {payload_type: 100, payload_name: VP9, codec_params: {profile-id: 2}}, {payload_type: 102, payload_name: AV1X, codec_params: {}}], rtp: {remote_ssrc: 3460464873, local_ssrc: 1, rtcp_mode: RtcpMode::kReducedSize, rtcp_xr: {receiver_reference_time_report: off}, transport_cc: on, lntf: {enabled: false}, nack: {rtp_history_ms: 1000}, ulpfec_payload_type: 106, red_type: 104, rtx_ssrc: 2592369340, rtx_payload_types: {97 (pt) -> 96 (apt), 99 (pt) -> 98 (apt), 101 (pt) -> 100 (apt), 103 (pt) -> 102 (apt), 105 (pt) -> 104 (apt), }, raw_payload_types: {}, extensions: []}, renderer: (renderer), render_delay_ms: 10, sync_group: stream_id, target_delay_ms: 0}
+(channel.cc:681): Add remote ssrc: 3460464873
+(channel.cc:965): Changing video state, send=0
+(peer_connection.cc:3254): Processing the MSIDs for MID=0 (streams=[stream_id]).
+(peer_connection.cc:3265): Processing the addition of a remote track for MID=0.
+(webrtc_voice_engine.cc:1959): SetOutputVolume() to 1 for recv stream with ssrc 375751647
+(peer_connection.cc:3254): Processing the MSIDs for MID=1 (streams=[stream_id]).
+(peer_connection.cc:3265): Processing the addition of a remote track for MID=1.
+(webrtc_video_engine.cc:3331): Absent receive stream; ignoring clearing encoded frame sink for ssrc 0
+(webrtc_video_engine.cc:1528): SetSink: ssrc:3460464873 (ptr)
+(conductor.cc:321): OnAddTrack 29702acc-67b0-4e05-a5cb-889057cd4d7b
+(conductor.cc:321): OnAddTrack 677e51df-5f88-48f0-9a66-a084f64ba7e7
+(peer_connection.cc:5971): Local and Remote descriptions must be applied to get the SSL Role of the session.
+(peer_connection.cc:5971): Local and Remote descriptions must be applied to get the SSL Role of the session.
+(conductor.cc:68): OnSuccess
+(dtls_srtp_transport.cc:62): Setting RTCP Transport on 0 transport 0
+(dtls_srtp_transport.cc:67): Setting RTP Transport on 0 transport c8003800
+(p2p_transport_channel.cc:460): Set ICE ufrag: NwP6 pwd: 93oUFqEHf41l3i/37ZhcsK+n on transport 0
+(dtls_transport.cc:377): DtlsTransport[0|1|__]: DTLS setup complete.
+(rtp_transceiver.cc:259): Changing transceiver (MID=0) current direction from <not set> to kSendRecv.
+(rtp_transceiver.cc:259): Changing transceiver (MID=1) current direction from <not set> to kSendRecv.
+(channel.cc:507): Channel enabled
+(channel.cc:816): Changing voice state, recv=0 send=0
+(channel.cc:507): Channel enabled
+(channel.cc:965): Changing video state, send=0
+(peer_connection.cc:4794): Session: 3184752886899679765 Old state: kHaveRemoteOffer New state: kStable
+(channel.cc:824): Setting local voice description
+(webrtc_voice_engine.cc:1356): WebRtcVoiceMediaChannel::SetRecvParameters: {codecs: [AudioCodec[111:opus:48000:0:2], AudioCodec[103:ISAC:16000:0:1], AudioCodec[104:ISAC:32000:0:1], AudioCodec[9:G722:8000:0:1], AudioCodec[102:ILBC:8000:0:1], AudioCodec[0:PCMU:8000:0:1], AudioCodec[8:PCMA:8000:0:1], AudioCodec[106:CN:32000:0:1], AudioCodec[105:CN:16000:0:1], AudioCodec[13:CN:8000:0:1], AudioCodec[110:telephone-event:48000:0:1], AudioCodec[112:telephone-event:32000:0:1], AudioCodec[113:telephone-event:16000:0:1], AudioCodec[126:telephone-event:8000:0:1]], extensions: [{uri: urn:ietf:params:rtp-hdrext:ssrc-audio-level, id: 1}, {uri: http://www.webrtc.org/experiments/rtp-hdrext/abs-send-time, id: 2}, {uri: http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01, id: 3}, {uri: urn:ietf:params:rtp-hdrext:sdes:mid, id: 4}, {uri: urn:ietf:params:rtp-hdrext:sdes:rtp-stream-id, id: 5}, {uri: urn:ietf:params:rtp-hdrext:sdes:repaired-rtp-stream-id, id: 6}]}
+(webrtc_voice_engine.cc:1523): Setting receive voice codecs.
+(audio_receive_stream.cc:380): AudioReceiveStream::ConfigureStream: {rtp: {remote_ssrc: 375751647, local_ssrc: 4195875351, transport_cc: on, nack: {rtp_history_ms: 0}, extensions: []}, rtcp_send_transport: (Transport), sync_group: stream_id}
+(audio_receive_stream.cc:144): ~AudioReceiveStream: 375751647
+(delay_manager.cc:73): Delay histogram config: quantile=1041529569 forget_factor=32745 start_forget_weight=2
+(decision_logic.cc:55): NetEq decision logic settings: estimate_dtx_delay=0 time_stretch_cn=0 target_level_window_ms=100
+(neteq_impl.cc:144): NetEq config: sample_rate_hz=16000, enable_post_decode_vad=true, max_packets_in_buffer=200, min_delay_ms=0, enable_fast_accelerate=false, enable_muted_state=true, enable_rtx_handling=false
+(audio_receive_stream.cc:123): AudioReceiveStream: 375751647
+(audio_receive_stream.cc:380): AudioReceiveStream::ConfigureStream: {rtp: {remote_ssrc: 375751647, local_ssrc: 4195875351, transport_cc: on, nack: {rtp_history_ms: 0}, extensions: [{uri: http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01, id: 3}, {uri: http://www.webrtc.org/experiments/rtp-hdrext/abs-send-time, id: 2}, {uri: urn:ietf:params:rtp-hdrext:sdes:mid, id: 4}, {uri: urn:ietf:params:rtp-hdrext:sdes:repaired-rtp-stream-id, id: 6}, {uri: urn:ietf:params:rtp-hdrext:sdes:rtp-stream-id, id: 5}, {uri: urn:ietf:params:rtp-hdrext:ssrc-audio-level, id: 1}]}, rtcp_send_transport: (Transport), sync_group: stream_id}
+(webrtc_voice_engine.cc:1794): AddSendStream: {id:audio_label;ssrcs:[6757796];ssrc_groups:;cname:eLsGuSI+9InfGHid;stream_ids:stream_id;}
+(delay_manager.cc:73): Delay histogram config: quantile=1041529569 forget_factor=32745 start_forget_weight=2
+(decision_logic.cc:55): NetEq decision logic settings: estimate_dtx_delay=0 time_stretch_cn=0 target_level_window_ms=100
+(neteq_impl.cc:144): NetEq config: sample_rate_hz=16000, enable_post_decode_vad=true, max_packets_in_buffer=200, min_delay_ms=0, enable_fast_accelerate=false, enable_muted_state=false, enable_rtx_handling=false
+(audio_coding_module.cc:224): Created
+(audio_send_stream.cc:160): AudioSendStream: 6757796
+(audio_send_stream.cc:227): AudioSendStream::ConfigureStream: {rtp: {ssrc: 6757796, extmap-allow-mixed: false, extensions: [{uri: http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01, id: 3}, {uri: http://www.webrtc.org/experiments/rtp-hdrext/abs-send-time, id: 2}, {uri: urn:ietf:params:rtp-hdrext:sdes:mid, id: 4}, {uri: urn:ietf:params:rtp-hdrext:sdes:repaired-rtp-stream-id, id: 6}, {uri: urn:ietf:params:rtp-hdrext:sdes:rtp-stream-id, id: 5}, {uri: urn:ietf:params:rtp-hdrext:ssrc-audio-level, id: 1}], c_name: eLsGuSI+9InfGHid}, rtcp_report_interval_ms: 5000, send_transport: (Transport), min_bitrate_bps: 32000, max_bitrate_bps: 32000, send_codec_spec: {nack_enabled: false, transport_cc_enabled: true, cng_payload_type: <unset>, payload_type: 111, format: {name: opus, clockrate_hz: 48000, num_channels: 2, parameters: {minptime: 10, useinbandfec: 1}}}}
+(audio_receive_stream.cc:144): ~AudioReceiveStream: 375751647
+(delay_manager.cc:73): Delay histogram config: quantile=1041529569 forget_factor=32745 start_forget_weight=2
+(decision_logic.cc:55): NetEq decision logic settings: estimate_dtx_delay=0 time_stretch_cn=0 target_level_window_ms=100
+(neteq_impl.cc:144): NetEq config: sample_rate_hz=16000, enable_post_decode_vad=true, max_packets_in_buffer=200, min_delay_ms=0, enable_fast_accelerate=false, enable_muted_state=true, enable_rtx_handling=false
+(audio_receive_stream.cc:123): AudioReceiveStream: 375751647
+(audio_receive_stream.cc:380): AudioReceiveStream::ConfigureStream: {rtp: {remote_ssrc: 375751647, local_ssrc: 6757796, transport_cc: on, nack: {rtp_history_ms: 0}, extensions: [{uri: http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01, id: 3}, {uri: http://www.webrtc.org/experiments/rtp-hdrext/abs-send-time, id: 2}, {uri: urn:ietf:params:rtp-hdrext:sdes:mid, id: 4}, {uri: urn:ietf:params:rtp-hdrext:sdes:repaired-rtp-stream-id, id: 6}, {uri: urn:ietf:params:rtp-hdrext:sdes:rtp-stream-id, id: 5}, {uri: urn:ietf:params:rtp-hdrext:ssrc-audio-level, id: 1}]}, rtcp_send_transport: (Transport), sync_group: stream_id}
+(channel.cc:635): Add send stream ssrc: 6757796
+(channel.cc:816): Changing voice state, recv=1 send=0
+(channel.cc:978): Setting local video description
+(webrtc_video_engine.cc:1157): SetRecvParameters: {codecs: [VideoCodec[96:VP8], VideoCodec[97:rtx], VideoCodec[98:VP9], VideoCodec[99:rtx], VideoCodec[100:VP9], VideoCodec[101:rtx], VideoCodec[127:AV1X], VideoCodec[123:rtx], VideoCodec[125:red], VideoCodec[122:rtx], VideoCodec[124:ulpfec]], extensions: [{uri: urn:ietf:params:rtp-hdrext:toffset, id: 14}, {uri: http://www.webrtc.org/experiments/rtp-hdrext/abs-send-time, id: 2}, {uri: urn:3gpp:video-orientation, id: 13}, {uri: http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01, id: 3}, {uri: http://www.webrtc.org/experiments/rtp-hdrext/playout-delay, id: 12}, {uri: http://www.webrtc.org/experiments/rtp-hdrext/video-content-type, id: 11}, {uri: http://www.webrtc.org/experiments/rtp-hdrext/video-timing, id: 7}, {uri: http://tools.ietf.org/html/draft-ietf-avtext-framemarking-07, id: 8}, {uri: http://www.webrtc.org/experiments/rtp-hdrext/color-space, id: 9}, {uri: urn:ietf:params:rtp-hdrext:sdes:mid, id: 4}, {uri: urn:ietf:params:rtp-hdrext:sdes:rtp-stream-id, id: 5}, {uri: urn:ietf:params:rtp-hdrext:sdes:repaired-rtp-stream-id, id: 6}]}
+(webrtc_video_engine.cc:1172): Changing recv codecs from {VideoCodec[96:VP8], VideoCodec[98:VP9], VideoCodec[100:VP9], VideoCodec[102:AV1X]} to {VideoCodec[96:VP8], VideoCodec[98:VP9], VideoCodec[100:VP9], VideoCodec[127:AV1X]}
+(webrtc_video_engine.cc:2892): MaybeRecreateWebRtcFlexfecStream (recv) because of SetRecvParameters
+(webrtc_video_engine.cc:2897): RecreateWebRtcVideoStream (recv) because of SetRecvParameters
+(video_receive_stream2.cc:270): ~VideoReceiveStream2: {decoders: [{payload_type: 96, payload_name: VP8, codec_params: {}}, {payload_type: 98, payload_name: VP9, codec_params: {profile-id: 0}}, {payload_type: 100, payload_name: VP9, codec_params: {profile-id: 2}}, {payload_type: 102, payload_name: AV1X, codec_params: {}}], rtp: {remote_ssrc: 3460464873, local_ssrc: 1, rtcp_mode: RtcpMode::kReducedSize, rtcp_xr: {receiver_reference_time_report: off}, transport_cc: on, lntf: {enabled: false}, nack: {rtp_history_ms: 1000}, ulpfec_payload_type: 106, red_type: 104, rtx_ssrc: 2592369340, rtx_payload_types: {97 (pt) -> 96 (apt), 99 (pt) -> 98 (apt), 101 (pt) -> 100 (apt), 103 (pt) -> 102 (apt), 105 (pt) -> 104 (apt), }, raw_payload_types: {}, extensions: []}, renderer: (renderer), render_delay_ms: 10, sync_group: stream_id, target_delay_ms: 0}
+(receive_statistics_proxy2.cc:495): Frames decoded 0
+WebRTC.Video.DroppedFrames.Receiver 0
+
+(video_render_frames.cc:47): WebRTC.Video.DroppedFrames.RenderQueue 0
+(video_receive_stream2.cc:228): VideoReceiveStream2: {decoders: [{payload_type: 96, payload_name: VP8, codec_params: {}}, {payload_type: 98, payload_name: VP9, codec_params: {profile-id: 0}}, {payload_type: 100, payload_name: VP9, codec_params: {profile-id: 2}}, {payload_type: 127, payload_name: AV1X, codec_params: {}}], rtp: {remote_ssrc: 3460464873, local_ssrc: 1, rtcp_mode: RtcpMode::kReducedSize, rtcp_xr: {receiver_reference_time_report: off}, transport_cc: on, lntf: {enabled: false}, nack: {rtp_history_ms: 1000}, ulpfec_payload_type: 124, red_type: 125, rtx_ssrc: 2592369340, rtx_payload_types: {97 (pt) -> 96 (apt), 99 (pt) -> 98 (apt), 101 (pt) -> 100 (apt), 122 (pt) -> 125 (apt), 123 (pt) -> 127 (apt), }, raw_payload_types: {}, extensions: [{uri: http://tools.ietf.org/html/draft-ietf-avtext-framemarking-07, id: 8}, {uri: http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01, id: 3}, {uri: http://www.webrtc.org/experiments/rtp-hdrext/abs-send-time, id: 2}, {uri: http://www.webrtc.org/experiments/rtp-hdrext/color-space, id: 9}, {uri: http://www.webrtc.org/experiments/rtp-hdrext/playout-delay, id: 12}, {uri: http://www.webrtc.org/experiments/rtp-hdrext/video-content-type, id: 11}, {uri: http://www.webrtc.org/experiments/rtp-hdrext/video-timing, id: 7}, {uri: urn:3gpp:video-orientation, id: 13}, {uri: urn:ietf:params:rtp-hdrext:sdes:mid, id: 4}, {uri: urn:ietf:params:rtp-hdrext:sdes:repaired-rtp-stream-id, id: 6}, {uri: urn:ietf:params:rtp-hdrext:sdes:rtp-stream-id, id: 5}, {uri: urn:ietf:params:rtp-hdrext:toffset, id: 14}]}, renderer: (renderer), render_delay_ms: 10, sync_group: stream_id, target_delay_ms: 0}
+(webrtc_video_engine.cc:1273): AddSendStream: {id:video_label;ssrcs:[402868024,1070188671];ssrc_groups:{semantics:FID;ssrcs:[402868024,1070188671]};cname:eLsGuSI+9InfGHid;stream_ids:stream_id;}
+(webrtc_video_engine.cc:2142): RecreateWebRtcStream (send) because of SetCodec.
+(alr_experiment.cc:79): Using ALR experiment settings: pacing factor: 1, max pacer queue length: 2875, ALR bandwidth usage percent: 80, ALR start budget level percent: 40, ALR end budget level percent: -60, ALR experiment group ID: 3
+(video_stream_encoder.cc:1928): Automatic animation detection experiment is disabled.
+(balanced_degradation_settings.cc:96): Unsupported size, value ignored.
+(balanced_degradation_settings.cc:96): Unsupported size, value ignored.
+(video_send_stream_impl.cc:231): VideoSendStreamInternal: {encoder_settings: { experiment_cpu_load_estimator: off}}, rtp: {ssrcs: [402868024], rids: [], mid: '1', rtcp_mode: RtcpMode::kReducedSize, max_packet_size: 1200, extmap-allow-mixed: false, extensions: [{uri: http://tools.ietf.org/html/draft-ietf-avtext-framemarking-07, id: 8}, {uri: http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01, id: 3}, {uri: http://www.webrtc.org/experiments/rtp-hdrext/abs-send-time, id: 2}, {uri: http://www.webrtc.org/experiments/rtp-hdrext/color-space, id: 9}, {uri: http://www.webrtc.org/experiments/rtp-hdrext/playout-delay, id: 12}, {uri: http://www.webrtc.org/experiments/rtp-hdrext/video-content-type, id: 11}, {uri: http://www.webrtc.org/experiments/rtp-hdrext/video-timing, id: 7}, {uri: urn:3gpp:video-orientation, id: 13}, {uri: urn:ietf:params:rtp-hdrext:sdes:mid, id: 4}, {uri: urn:ietf:params:rtp-hdrext:sdes:repaired-rtp-stream-id, id: 6}, {uri: urn:ietf:params:rtp-hdrext:sdes:rtp-stream-id, id: 5}], lntf: {enabled: false}, nack: {rtp_history_ms: 1000}, ulpfec: {ulpfec_payload_type: 124, red_payload_type: 125, red_rtx_payload_type: 122}, payload_name: VP8, payload_type: 96, raw_payload: false, flexfec: {payload_type: -1, ssrc: 0, protected_media_ssrcs: []}, rtx: {ssrcs: [1070188671], payload_type: 97}, c_name: eLsGuSI+9InfGHid}, rtcp_report_interval_ms: 1000, send_transport: (Transport), render_delay_ms: 0, target_delay_ms: 0, suspend_below_min_bitrate: off}
+(video_stream_encoder.cc:419): ConfigureEncoder requested.
+(video_send_stream.cc:177): VideoSendStream::Stop
+(webrtc_video_engine.cc:1320): SetLocalSsrc on all the receive streams because we added a send stream.
+(webrtc_video_engine.cc:2834): RecreateWebRtcStream (recv) because of SetLocalSsrc; local_ssrc=402868024
+(video_send_stream_impl.cc:386): VideoSendStream::Stop
+(video_receive_stream2.cc:270): ~VideoReceiveStream2: {decoders: [{payload_type: 96, payload_name: VP8, codec_params: {}}, {payload_type: 98, payload_name: VP9, codec_params: {profile-id: 0}}, {payload_type: 100, payload_name: VP9, codec_params: {profile-id: 2}}, {payload_type: 127, payload_name: AV1X, codec_params: {}}], rtp: {remote_ssrc: 3460464873, local_ssrc: 1, rtcp_mode: RtcpMode::kReducedSize, rtcp_xr: {receiver_reference_time_report: off}, transport_cc: on, lntf: {enabled: false}, nack: {rtp_history_ms: 1000}, ulpfec_payload_type: 124, red_type: 125, rtx_ssrc: 2592369340, rtx_payload_types: {97 (pt) -> 96 (apt), 99 (pt) -> 98 (apt), 101 (pt) -> 100 (apt), 122 (pt) -> 125 (apt), 123 (pt) -> 127 (apt), }, raw_payload_types: {}, extensions: [{uri: http://tools.ietf.org/html/draft-ietf-avtext-framemarking-07, id: 8}, {uri: http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01, id: 3}, {uri: http://www.webrtc.org/experiments/rtp-hdrext/abs-send-time, id: 2}, {uri: http://www.webrtc.org/experiments/rtp-hdrext/color-space, id: 9}, {uri: http://www.webrtc.org/experiments/rtp-hdrext/playout-delay, id: 12}, {uri: http://www.webrtc.org/experiments/rtp-hdrext/video-content-type, id: 11}, {uri: http://www.webrtc.org/experiments/rtp-hdrext/video-timing, id: 7}, {uri: urn:3gpp:video-orientation, id: 13}, {uri: urn:ietf:params:rtp-hdrext:sdes:mid, id: 4}, {uri: urn:ietf:params:rtp-hdrext:sdes:repaired-rtp-stream-id, id: 6}, {uri: urn:ietf:params:rtp-hdrext:sdes:rtp-stream-id, id: 5}, {uri: urn:ietf:params:rtp-hdrext:toffset, id: 14}]}, renderer: (renderer), render_delay_ms: 10, sync_group: stream_id, target_delay_ms: 0}
+(receive_statistics_proxy2.cc:495): Frames decoded 0
+WebRTC.Video.DroppedFrames.Receiver 0
+
+(video_render_frames.cc:47): WebRTC.Video.DroppedFrames.RenderQueue 0
+(video_receive_stream2.cc:228): VideoReceiveStream2: {decoders: [{payload_type: 96, payload_name: VP8, codec_params: {}}, {payload_type: 98, payload_name: VP9, codec_params: {profile-id: 0}}, {payload_type: 100, payload_name: VP9, codec_params: {profile-id: 2}}, {payload_type: 127, payload_name: AV1X, codec_params: {}}], rtp: {remote_ssrc: 3460464873, local_ssrc: 402868024, rtcp_mode: RtcpMode::kReducedSize, rtcp_xr: {receiver_reference_time_report: off}, transport_cc: on, lntf: {enabled: false}, nack: {rtp_history_ms: 1000}, ulpfec_payload_type: 124, red_type: 125, rtx_ssrc: 2592369340, rtx_payload_types: {97 (pt) -> 96 (apt), 99 (pt) -> 98 (apt), 101 (pt) -> 100 (apt), 122 (pt) -> 125 (apt), 123 (pt) -> 127 (apt), }, raw_payload_types: {}, extensions: [{uri: http://tools.ietf.org/html/draft-ietf-avtext-framemarking-07, id: 8}, {uri: http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01, id: 3}, {uri: http://www.webrtc.org/experiments/rtp-hdrext/abs-send-time, id: 2}, {uri: http://www.webrtc.org/experiments/rtp-hdrext/color-space, id: 9}, {uri: http://www.webrtc.org/experiments/rtp-hdrext/playout-delay, id: 12}, {uri: http://www.webrtc.org/experiments/rtp-hdrext/video-content-type, id: 11}, {uri: http://www.webrtc.org/experiments/rtp-hdrext/video-timing, id: 7}, {uri: urn:3gpp:video-orientation, id: 13}, {uri: urn:ietf:params:rtp-hdrext:sdes:mid, id: 4}, {uri: urn:ietf:params:rtp-hdrext:sdes:repaired-rtp-stream-id, id: 6}, {uri: urn:ietf:params:rtp-hdrext:sdes:rtp-stream-id, id: 5}, {uri: urn:ietf:params:rtp-hdrext:toffset, id: 14}]}, renderer: (renderer), render_delay_ms: 10, sync_group: stream_id, target_delay_ms: 0}
+(channel.cc:635): Add send stream ssrc: 402868024
+(video_send_stream.cc:177): VideoSendStream::Stop
+(channel.cc:965): Changing video state, send=0
+(video_send_stream_impl.cc:386): VideoSendStream::Stop
+(peer_connection.cc:5950): Non-rejected SCTP m= section is needed to get the SSL Role of the SCTP transport.
+(webrtc_voice_engine.cc:1495): Setting voice channel options: AudioOptions {}
+(webrtc_voice_engine.cc:315): WebRtcVoiceEngine::ApplyOptions: AudioOptions {audio_jitter_buffer_max_packets: 200, audio_jitter_buffer_fast_accelerate: 0, audio_jitter_buffer_min_delay_ms: 0, audio_jitter_buffer_enable_rtx_handling: 0, }
+(webrtc_voice_engine.cc:436): NetEq capacity is 200
+(webrtc_voice_engine.cc:442): NetEq fast mode? 0
+(webrtc_voice_engine.cc:448): NetEq minimum delay is 0
+(webrtc_voice_engine.cc:454): NetEq handle reordered packets? 0
+(webrtc_voice_engine.cc:474): Experimental ns is enabled? 0
+(audio_processing_impl.cc:526): AudioProcessing::ApplyConfig: AudioProcessing::Config{ pipeline: {maximum_internal_processing_rate: 48000, multi_channel_render: 0, , multi_channel_capture: 0}, pre_amplifier: { enabled: 0, fixed_gain_factor: 1 }, high_pass_filter: { enabled: 1 }, echo_canceller: { enabled: 1, mobile_mode: 0, enforce_high_pass_filtering: 1 }, noise_suppression: { enabled: 1, level: High }, transient_suppression: { enabled: 0 }, voice_detection: { enabled: 1 }, gain_controller1: { enabled: 1, mode: AdaptiveAnalog, target_level_dbfs: 3, compression_gain_db: 9, enable_limiter: 1, analog_level_minimum: 0, analog_level_maximum: 255 }, gain_controller2: { enabled: 0, fixed_digital: { gain_db: 0 }, adaptive_digital: { enabled: 0, level_estimator: Rms, use_saturation_protector: 1, extra_saturation_margin_db: 2 } }, residual_echo_detector: { enabled: 1 }, level_estimation: { enabled: 0 } }
+(webrtc_voice_engine.cc:1513): Set voice channel options. Current options: AudioOptions {audio_jitter_buffer_max_packets: 200, audio_jitter_buffer_fast_accelerate: 0, audio_jitter_buffer_min_delay_ms: 0, audio_jitter_buffer_enable_rtx_handling: 0, }
+(webrtc_video_engine.cc:1232): SetVideoSend (ssrc= 402868024, options: VideoOptions {is_screencast : false, }, source = (source))
+(video_stream_encoder.cc:419): ConfigureEncoder requested.
+(basic_port_allocator.cc:375): Start getting ports with turn_port_prune_policy 0
+(network.cc:885): Connect failed with 99
+(basic_port_allocator.cc:111): Filtered out ignored networks:
+(basic_port_allocator.cc:113): Net[lo:127.0.0.x/8:Loopback:id=2]
+(basic_port_allocator.cc:861): Network manager has started
+(basic_port_allocator.cc:111): Filtered out ignored networks:
+(basic_port_allocator.cc:113): Net[lo:127.0.0.x/8:Loopback:id=2]
+(basic_port_allocator.cc:776): Allocate ports on 1 networks
+(basic_port_allocator.cc:1353): Net[eth0:172.17.0.x/16:Ethernet:id=1]: Allocation Phase=Udp
+(port.cc:186): Port[c80197b0::1:0:local:Net[eth0:172.17.0.x/16:Ethernet:id=1]]: Port created with network cost 0
+(basic_port_allocator.cc:1424): AllocationSequence: UDPPort will be handling the STUN candidate generation.
+(basic_port_allocator.cc:885): Adding allocated port for 0
+(basic_port_allocator.cc:906): Port[c80197b0:0:1:0:local:Net[eth0:172.17.0.x/16:Ethernet:id=1]]: Added port to allocator
+(basic_port_allocator.cc:924): Port[c80197b0:0:1:0:local:Net[eth0:172.17.0.x/16:Ethernet:id=1]]: Gathered candidate: Cand[:4112619227:1:udp:2122260223:172.17.0.x:52761:local::0:NwP6:93oUFqEHf41l3i/37ZhcsK+n:1:0:0]
+(basic_port_allocator.cc:957): Port[c80197b0:0:1:0:local:Net[eth0:172.17.0.x/16:Ethernet:id=1]]: Port ready.
+(stun_port.cc:439): Port[c80197b0:0:1:0:local:Net[eth0:172.17.0.x/16:Ethernet:id=1]]: Starting STUN host lookup for stun.l.google.com:19302
+(conductor.cc:68): OnSuccess
+(conductor.cc:333): OnIceCandidate 0
+(thread.cc:787): Waiting for the thread to join, but blocking calls have been disallowed
+(basic_port_allocator.cc:924): Port[c80197b0:0:1:0:local:Net[eth0:172.17.0.x/16:Ethernet:id=1]]: Gathered candidate: Cand[:369102903:1:udp:1686052607:76.36.25.x:59989:stun:172.17.0.2:52761:NwP6:93oUFqEHf41l3i/37ZhcsK+n:1:0:0]
+(basic_port_allocator.cc:1065): Port[c80197b0:0:1:0:local:Net[eth0:172.17.0.x/16:Ethernet:id=1]]: Port completed gathering candidates.
+(conductor.cc:333): OnIceCandidate 0
+(basic_port_allocator.cc:1353): Net[eth0:172.17.0.x/16:Ethernet:id=1]: Allocation Phase=Relay
+(basic_port_allocator.cc:1353): Net[eth0:172.17.0.x/16:Ethernet:id=1]: Allocation Phase=Tcp
+(port.cc:186): Port[c801b750::1:0:local:Net[eth0:172.17.0.x/16:Ethernet:id=1]]: Port created with network cost 0
+(basic_port_allocator.cc:885): Adding allocated port for 0
+(basic_port_allocator.cc:906): Port[c801b750:0:1:0:local:Net[eth0:172.17.0.x/16:Ethernet:id=1]]: Added port to allocator
+(basic_port_allocator.cc:924): Port[c801b750:0:1:0:local:Net[eth0:172.17.0.x/16:Ethernet:id=1]]: Gathered candidate: Cand[:3147983403:1:tcp:1518280447:172.17.0.x:34271:local::0:NwP6:93oUFqEHf41l3i/37ZhcsK+n:1:0:0]
+(basic_port_allocator.cc:957): Port[c801b750:0:1:0:local:Net[eth0:172.17.0.x/16:Ethernet:id=1]]: Port ready.
+(basic_port_allocator.cc:1065): Port[c801b750:0:1:0:local:Net[eth0:172.17.0.x/16:Ethernet:id=1]]: Port completed gathering candidates.
+(basic_port_allocator.cc:1140): All candidates gathered for 0:1:0
+(conductor.cc:333): OnIceCandidate 0
+(p2p_transport_channel.cc:933): P2PTransportChannel: 0, component 1 gathering complete
+(connection.cc:312): Conn[c801ca40:0:Net[eth0:172.17.0.x/16:Ethernet:id=1]:v99GrHjx:1:0:local:udp:172.17.0.x:52761->UIHgyEnB:1:2122260223:local:udp:172.17.0.x:44060|C--W|-|0|0|9115038255631187454|-]: Connection created
+(p2p_transport_channel.cc:1382): Channel[0|1|__]: Created connection with origin: 2, total: 1
+(p2p_transport_channel.cc:1817): Channel[0|1|__]: Transport channel state changed from 0 to 2
+(jsep_transport_controller.cc:1421): 0 Transport 1 state changed. Check if state is complete.
+(jsep_transport_controller.cc:1421): 0 Transport 1 state changed. Check if state is complete.
+(p2p_transport_channel.cc:1616): Channel[0|1|__]: Have a pingable connection for the first time; starting to ping.
+(connection.cc:1167): Conn[c801ca40:0:Net[eth0:172.17.0.x/16:Ethernet:id=1]:v99GrHjx:1:0:local:udp:172.17.0.x:52761->UIHgyEnB:1:2122260223:local:udp:172.17.0.x:44060|C--W|-|0|0|9115038255631187454|-]: Sent STUN BINDING request, id=627253346f37522b70775337, use_candidate=0, nomination=0
+(peer_connection.cc:4698): Changing IceConnectionState 0 => 1
+(conductor.cc:437):  Received candidate :{
+   "candidate" : "candidate:4112619227 1 udp 2122260223 172.17.0.2 44060 typ host generation 0 ufrag A5sD network-id 1",
+   "sdpMLineIndex" : 0,
+   "sdpMid" : "0"
+}
+
+(jsep_transport_controller.cc:342): Not adding candidate because the JsepTransport doesn't exist. Ignore it.
+(conductor.cc:437):  Received candidate :{
+   "candidate" : "candidate:4112619227 1 udp 2122260223 172.17.0.2 33822 typ host generation 0 ufrag A5sD network-id 1",
+   "sdpMLineIndex" : 1,
+   "sdpMid" : "1"
+}
+
+(connection.cc:312): Conn[c801dfc0:0:Net[eth0:172.17.0.x/16:Ethernet:id=1]:v99GrHjx:1:0:local:udp:172.17.0.x:52761->wfSqGgEu:1:1686052607:stun:udp:76.36.25.x:58375|C--W|-|0|0|7241540810645061118|-]: Connection created
+(p2p_transport_channel.cc:1382): Channel[0|1|__]: Created connection with origin: 2, total: 2
+(p2p_transport_channel.cc:1817): Channel[0|1|__]: Transport channel state changed from 2 to 1
+(jsep_transport_controller.cc:1421): 0 Transport 1 state changed. Check if state is complete.
+(conductor.cc:437):  Received candidate :{
+   "candidate" : "candidate:369102903 1 udp 1686052607 76.36.25.6 58375 typ srflx raddr 172.17.0.2 rport 44060 generation 0 ufrag A5sD network-id 1",
+   "sdpMLineIndex" : 0,
+   "sdpMid" : "0"
+}
+
+(jsep_transport_controller.cc:342): Not adding candidate because the JsepTransport doesn't exist. Ignore it.
+(conductor.cc:437):  Received candidate :{
+   "candidate" : "candidate:369102903 1 udp 1686052607 76.36.25.6 60271 typ srflx raddr 172.17.0.2 rport 33822 generation 0 ufrag A5sD network-id 1",
+   "sdpMLineIndex" : 1,
+   "sdpMid" : "1"
+}
+
+(connection.cc:312): Conn[c801f420:0:Net[eth0:172.17.0.x/16:Ethernet:id=1]:cwc3iuOQ:1:0:local:tcp:172.17.0.x:34271->Zy+sFux8:1:1518280447:local:tcp:172.17.0.x:51925|C--W|-|0|0|6520964869057822206|-]: Connection created
+(p2p_transport_channel.cc:1382): Channel[0|1|__]: Created connection with origin: 2, total: 3
+(conductor.cc:437):  Received candidate :{
+   "candidate" : "candidate:3147983403 1 tcp 1518280447 172.17.0.2 51925 typ host tcptype passive generation 0 ufrag A5sD network-id 1",
+   "sdpMLineIndex" : 0,
+   "sdpMid" : "0"
+}
+
+(jsep_transport_controller.cc:342): Not adding candidate because the JsepTransport doesn't exist. Ignore it.
+(conductor.cc:437):  Received candidate :{
+   "candidate" : "candidate:3147983403 1 tcp 1518280447 172.17.0.2 35961 typ host tcptype passive generation 0 ufrag A5sD network-id 1",
+   "sdpMLineIndex" : 1,
+   "sdpMid" : "1"
+}
+
+(peer_connection.cc:4717): Changing standardized IceConnectionState 0 => 1
+(connection.cc:1167): Conn[c801dfc0:0:Net[eth0:172.17.0.x/16:Ethernet:id=1]:v99GrHjx:1:0:local:udp:172.17.0.x:52761->wfSqGgEu:1:1686052607:stun:udp:76.36.25.x:58375|C--W|-|0|0|7241540810645061118|-]: Sent STUN BINDING request, id=713173374c3644344b464d4e, use_candidate=0, nomination=0
+(connection.cc:1167): Conn[c801ca40:0:Net[eth0:172.17.0.x/16:Ethernet:id=1]:v99GrHjx:1:0:local:udp:172.17.0.x:52761->UIHgyEnB:1:2122260223:local:udp:172.17.0.x:44060|C--I|-|0|0|9115038255631187454|-]: Sent STUN BINDING request, id=786e7a753442577155536859, use_candidate=0, nomination=0
+(connection.cc:1167): Conn[c801dfc0:0:Net[eth0:172.17.0.x/16:Ethernet:id=1]:v99GrHjx:1:0:local:udp:172.17.0.x:52761->wfSqGgEu:1:1686052607:stun:udp:76.36.25.x:58375|C--I|-|0|0|7241540810645061118|-]: Sent STUN BINDING request, id=513978336359576d7656667a, use_candidate=0, nomination=0
+(connection.cc:484): Conn[c801ca40:0:Net[eth0:172.17.0.x/16:Ethernet:id=1]:v99GrHjx:1:0:local:udp:172.17.0.x:52761->UIHgyEnB:1:2122260223:local:udp:172.17.0.x:44060|C--I|-|0|0|9115038255631187454|-]: Received STUN BINDING request, id=6e336b6a664c534b36312f42
+(connection.cc:723): Conn[c801ca40:0:Net[eth0:172.17.0.x/16:Ethernet:id=1]:v99GrHjx:1:0:local:udp:172.17.0.x:52761->UIHgyEnB:1:2122260223:local:udp:172.17.0.x:44060|CR-I|-|0|0|9115038255631187454|-]: Sent STUN BINDING response, to=172.17.0.x:44060, id=6e336b6a664c534b36312f42
+(p2p_transport_channel.cc:1139): Not switching the selected connection on controlled side yet: Conn[c801ca40:0:Net[eth0:172.17.0.x/16:Ethernet:id=1]:v99GrHjx:1:0:local:udp:172.17.0.x:52761->UIHgyEnB:1:2122260223:local:udp:172.17.0.x:44060|CR-I|-|1|0|9115038255631187454|-]
+(connection.cc:1082): Conn[c801ca40:0:Net[eth0:172.17.0.x/16:Ethernet:id=1]:v99GrHjx:1:0:local:udp:172.17.0.x:52761->UIHgyEnB:1:2122260223:local:udp:172.17.0.x:44060|CR-I|-|1|0|9115038255631187454|-]: Received STUN BINDING response, id=627253346f37522b70775337, code=0, rtt=171, pings_since_last_response=627253346f37522b70775337 786e7a753442577155536859 
+(p2p_transport_channel.cc:275): Switching selected connection due to: candidate pair state changed
+(p2p_transport_channel.cc:1731): Channel[0|1|R_]: New selected connection: Conn[c801ca40:0:Net[eth0:172.17.0.x/16:Ethernet:id=1]:v99GrHjx:1:0:local:udp:172.17.0.x:52761->UIHgyEnB:1:2122260223:local:udp:172.17.0.x:44060|CRWS|S|1|0|9115038255631187454|171]
+(channel.cc:352): Network route was changed.
+(channel.cc:352): Network route was changed.
+(rtp_transport_controller_send.cc:295): Network route changed on transport 0: new_route = [ connected: 1 local: [ 1/1 Ethernet turn: 0 ] remote: [ 1/1 Ethernet turn: 0 ] packet_overhead_bytes: 28 ]
+(connection.cc:740): Conn[c801dfc0:0:Net[eth0:172.17.0.x/16:Ethernet:id=1]:v99GrHjx:1:0:local:udp:172.17.0.x:52761->wfSqGgEu:1:1686052607:stun:udp:76.36.25.x:58375|C--I|-|0|0|7241540810645061118|-]: Connection pruned
+(connection.cc:740): Conn[c801f420:0:Net[eth0:172.17.0.x/16:Ethernet:id=1]:cwc3iuOQ:1:0:local:tcp:172.17.0.x:34271->Zy+sFux8:1:1518280447:local:tcp:172.17.0.x:51925|---W|-|0|0|6520964869057822206|-]: Connection pruned
+(dtls_transport.cc:828): DtlsTransport[0|1|__]: configuring DTLS handshake timeout 342 based on ICE RTT 171
+(openssl_stream_adapter.cc:793): BeginSSL with peer.
+(dtls_transport.cc:733): DtlsTransport[0|1|__]: DtlsTransport: Started DTLS handshake
+(srtp_transport.cc:366): The params in SRTP transport are reset.
+(p2p_transport_channel.cc:1817): Channel[0|1|RW]: Transport channel state changed from 1 to 2
+(jsep_transport_controller.cc:1421): 0 Transport 1 state changed. Check if state is complete.
+(jsep_transport_controller.cc:1421): 0 Transport 1 state changed. Check if state is complete.
+(peer_connection.cc:4717): Changing standardized IceConnectionState 1 => 2
+(openssl_stream_adapter.cc:1074): Accepted peer certificate.
+(dtls_transport.cc:661): DtlsTransport[0|1|__]: DTLS handshake complete.
+(jsep_transport_controller.cc:1344):  Transport 0 writability changed to 1.
+(dtls_srtp_transport.cc:220): Extracting keys from transport: 0
+(peer_connection.cc:6322): Changing to ICE connected state because all transports are writable.
+(peer_connection.cc:4698): Changing IceConnectionState 1 => 2
+(call.cc:1056): UpdateAggregateNetworkState: aggregate_state change to up
+(rtp_transport_controller_send.cc:599): Creating fallback congestion controller
+(alpha_cc_network_control.cc:61): Using AlphaRTC
+(srtp_transport.cc:311): SRTP activated with negotiated parameters: send cipher_suite 1 recv cipher_suite 1
+(channel.cc:537): Channel writable (0) for the first time
+(channel.cc:537): Channel writable (1) for the first time
+(webrtc_voice_engine.cc:315): WebRtcVoiceEngine::ApplyOptions: AudioOptions {audio_jitter_buffer_max_packets: 200, audio_jitter_buffer_fast_accelerate: 0, audio_jitter_buffer_min_delay_ms: 0, audio_jitter_buffer_enable_rtx_handling: 0, }
+(webrtc_voice_engine.cc:436): NetEq capacity is 200
+(webrtc_voice_engine.cc:442): NetEq fast mode? 0
+(webrtc_voice_engine.cc:448): NetEq minimum delay is 0
+(webrtc_voice_engine.cc:454): NetEq handle reordered packets? 0
+(webrtc_voice_engine.cc:474): Experimental ns is enabled? 0
+(audio_processing_impl.cc:526): AudioProcessing::ApplyConfig: AudioProcessing::Config{ pipeline: {maximum_internal_processing_rate: 48000, multi_channel_render: 0, , multi_channel_capture: 0}, pre_amplifier: { enabled: 0, fixed_gain_factor: 1 }, high_pass_filter: { enabled: 1 }, echo_canceller: { enabled: 1, mobile_mode: 0, enforce_high_pass_filtering: 1 }, noise_suppression: { enabled: 1, level: High }, transient_suppression: { enabled: 0 }, voice_detection: { enabled: 1 }, gain_controller1: { enabled: 1, mode: AdaptiveAnalog, target_level_dbfs: 3, compression_gain_db: 9, enable_limiter: 1, analog_level_minimum: 0, analog_level_maximum: 255 }, gain_controller2: { enabled: 0, fixed_digital: { gain_db: 0 }, adaptive_digital: { enabled: 0, level_estimator: Rms, use_saturation_protector: 1, extra_saturation_margin_db: 2 } }, residual_echo_detector: { enabled: 1 }, level_estimation: { enabled: 0 } }
+(bitrate_allocator.cc:523): UpdateAllocationLimits : total_requested_min_bitrate: 32 kbps, total_requested_padding_bitrate: 0 bps, total_requested_max_bitrate: 32 kbps
+(bitrate_allocator.cc:394): AlphaRTC: Current BWE 300000
+(channel.cc:816): Changing voice state, recv=1 send=1
+(video_send_stream.cc:148): UpdateActiveSimulcastLayers: {1}
+(bitrate_allocator.cc:523): UpdateAllocationLimits : total_requested_min_bitrate: 32 kbps, total_requested_padding_bitrate: 0 bps, total_requested_max_bitrate: 10032 kbps
+(channel.cc:965): Changing video state, send=1
+(video_stream_encoder.cc:1698): Video suspend state changed to: not suspended
+(rtp_sender_audio.cc:309): First audio RTP packet sent to pacer
+(rtp_video_stream_receiver.cc:682): Packet received on SSRC: 3460464873 with payload type: 125, timestamp: 2339349957, sequence number: 7755, arrival time: 1702431296364, abs send time: 5117837
+(decoder_database.cc:141): Initializing decoder with payload type '96'.
+(network.cc:885): Connect failed with 99
+(video_send_stream_impl.cc:408): SignalEncoderTimedOut, Encoder timed out.
+(bitrate_allocator.cc:523): UpdateAllocationLimits : total_requested_min_bitrate: 32 kbps, total_requested_padding_bitrate: 0 bps, total_requested_max_bitrate: 32 kbps
+(network.cc:885): Connect failed with 99
+(video_render_frames.cc:71): Frame scheduled out of order, render_time=2006574, latest=2006979
+(video_render_frames.cc:71): Frame scheduled out of order, render_time=2006617, latest=2006979
+(video_render_frames.cc:71): Frame scheduled out of order, render_time=2006690, latest=2006979
+(video_render_frames.cc:71): Frame scheduled out of order, render_time=2006776, latest=2006979
+(nack_module.cc:324): Sequence number 7860 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 7861 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 7864 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 7867 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 7876 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 7877 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 7879 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 7883 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 7884 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 7885 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 7886 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 7887 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 7888 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 7889 removed from NACK list due to max retries.
+(network.cc:885): Connect failed with 99
+(video_render_frames.cc:71): Frame scheduled out of order, render_time=2006839, latest=2006979
+(video_render_frames.cc:71): Frame scheduled out of order, render_time=2006821, latest=2006979
+(nack_module.cc:324): Sequence number 7951 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 7952 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 7953 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 7955 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 7956 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 7959 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 7960 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 7962 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 7963 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 7965 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 7966 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 7971 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 7972 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 7973 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 7974 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 7975 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 7977 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 7978 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 7980 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 7981 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 7982 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 7983 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 7984 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 7985 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 7988 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 7989 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 7992 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 7993 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 7994 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 7999 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 8001 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 8002 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 8005 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 8007 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 8008 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 8009 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 8010 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 8011 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 8013 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 8014 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 8016 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 8017 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 8018 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 8019 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 8021 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 8022 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 8023 removed from NACK list due to max retries.
+(network.cc:885): Connect failed with 99
+(remote_ntp_time_estimator.cc:86): RTP timestamp: 2340054927 in NTP clock: 3911420104169 estimated time in receiver NTP clock: 3911420103437
+(video_receive_stream2.cc:714): No decodable frame in 3000 ms, requesting keyframe.
+(video_render_frames.cc:71): Frame scheduled out of order, render_time=2012420, latest=2012462
+(network.cc:885): Connect failed with 99
+(block_processor.cc:179): Delay changed to 27 at block 2408
+(connection.cc:1216): Connection deleted with number of pings sent: 2
+(p2p_transport_channel.cc:2007): Channel[0|1|RW]: Removed connection c801dfc0 (2 remaining)
+(connection.cc:1216): Connection deleted with number of pings sent: 0
+(p2p_transport_channel.cc:2007): Channel[0|1|RW]: Removed connection c801f420 (1 remaining)
+(rtp_video_stream_receiver.cc:682): Packet received on SSRC: 3460464873 with payload type: 125, timestamp: 2340253647, sequence number: 8270, arrival time: 1702431306381, abs send time: 7748190
+(rtp_streams_synchronizer2.cc:119): Sync info stats: 2013852, {ssrc: 375751647, cur_delay_ms: 1458} {ssrc: 3460464873, cur_delay_ms: 210} {relative_delay_ms: -1} 
+(rtp_streams_synchronizer2.cc:143): Sync delay stats: 2013852, {ssrc: 375751647, target_delay_ms: 0} {ssrc: 3460464873, target_delay_ms: 290} 
+(network.cc:885): Connect failed with 99
+(remote_ntp_time_estimator.cc:86): RTP timestamp: 510423773 in NTP clock: 3911420106341 estimated time in receiver NTP clock: 3911420105583
+(receive_statistics_proxy2.cc:530): Bad call (any) start: 2016475
+(receive_statistics_proxy2.cc:542): Bad call (qp) start: 2016475
+(network.cc:885): Connect failed with 99
+(block_processor.cc:179): Delay changed to 31 at block 3381
+(network.cc:885): Connect failed with 99
+(network.cc:885): Connect failed with 99
+(remote_ntp_time_estimator.cc:86): RTP timestamp: 2340894987 in NTP clock: 3911420113503 estimated time in receiver NTP clock: 3911420112699
+(network.cc:885): Connect failed with 99
+(rtp_video_stream_receiver.cc:682): Packet received on SSRC: 3460464873 with payload type: 125, timestamp: 2341153737, sequence number: 8807, arrival time: 1702431316385, abs send time: 10370679
+(rtp_streams_synchronizer2.cc:119): Sync info stats: 2024852, {ssrc: 375751647, cur_delay_ms: 1480} {ssrc: 3460464873, cur_delay_ms: 866} {relative_delay_ms: 0} 
+(rtp_streams_synchronizer2.cc:143): Sync delay stats: 2024852, {ssrc: 375751647, target_delay_ms: 0} {ssrc: 3460464873, target_delay_ms: 942} 
+(network.cc:885): Connect failed with 99
+(remote_ntp_time_estimator.cc:86): RTP timestamp: 510901586 in NTP clock: 3911420116296 estimated time in receiver NTP clock: 3911420115538
+(network.cc:885): Connect failed with 99
+(network.cc:885): Connect failed with 99
+(receive_statistics_proxy2.cc:548): Bad call (variance) start: 2030634
+(network.cc:885): Connect failed with 99
+(remote_ntp_time_estimator.cc:86): RTP timestamp: 2341768707 in NTP clock: 3911420123211 estimated time in receiver NTP clock: 3911420122635
+(network.cc:885): Connect failed with 99
+(rtp_video_stream_receiver.cc:682): Packet received on SSRC: 3460464873 with payload type: 125, timestamp: 2342057517, sequence number: 9405, arrival time: 1702431326426, abs send time: 13002605
+(rtp_streams_synchronizer2.cc:119): Sync info stats: 2034853, {ssrc: 375751647, cur_delay_ms: 1267} {ssrc: 3460464873, cur_delay_ms: 1094} {relative_delay_ms: 2} 
+(rtp_streams_synchronizer2.cc:143): Sync delay stats: 2034853, {ssrc: 375751647, target_delay_ms: 0} {ssrc: 3460464873, target_delay_ms: 1115} 
+(network.cc:885): Connect failed with 99
+(remote_ntp_time_estimator.cc:86): RTP timestamp: 511393065 in NTP clock: 3911420126535 estimated time in receiver NTP clock: 3911420126381
+(network.cc:885): Connect failed with 99
+(network.cc:885): Connect failed with 99
+(nack_module.cc:324): Sequence number 9646 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9647 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9648 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9649 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9650 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9652 removed from NACK list due to max retries.
+(network.cc:885): Connect failed with 99
+(remote_ntp_time_estimator.cc:86): RTP timestamp: 2342743677 in NTP clock: 3911420134044 estimated time in receiver NTP clock: 3911420133890
+(network.cc:885): Connect failed with 99
+(rtp_video_stream_receiver.cc:682): Packet received on SSRC: 3460464873 with payload type: 125, timestamp: 2342863647, sequence number: 9776, arrival time: 1702431336454, abs send time: 15351415
+(nack_module.cc:324): Sequence number 9782 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9783 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9784 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9785 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9786 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9788 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9789 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9790 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9791 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9792 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9794 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9800 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9802 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9805 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9807 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9808 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9809 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9810 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9811 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9812 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9815 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9816 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9818 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9821 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9822 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9823 removed from NACK list due to max retries.
+(network.cc:885): Connect failed with 99
+(remote_ntp_time_estimator.cc:86): RTP timestamp: 511863025 in NTP clock: 3911420136325 estimated time in receiver NTP clock: 3911420136265
+(nack_module.cc:324): Sequence number 9836 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9840 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9841 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9843 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9846 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9850 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9851 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9852 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9854 removed from NACK list due to max retries.
+(rtp_streams_synchronizer2.cc:119): Sync info stats: 2045852, {ssrc: 375751647, cur_delay_ms: 423} {ssrc: 3460464873, cur_delay_ms: 888} {relative_delay_ms: 170} 
+(rtp_streams_synchronizer2.cc:143): Sync delay stats: 2045852, {ssrc: 375751647, target_delay_ms: 0} {ssrc: 3460464873, target_delay_ms: 809} 
+(nack_module.cc:324): Sequence number 9856 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9857 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9858 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9860 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9865 removed from NACK list due to max retries.
+(video_receive_stream2.cc:714): No decodable frame in 3000 ms, requesting keyframe.
+(network.cc:885): Connect failed with 99
+(nack_module.cc:324): Sequence number 9867 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9869 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9871 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9872 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9874 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9875 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9876 removed from NACK list due to max retries.
+(network.cc:885): Connect failed with 99
+(nack_module.cc:324): Sequence number 9878 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9879 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9880 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9881 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9882 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9883 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9884 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9885 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9886 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9887 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9888 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9889 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9890 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9891 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9892 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9893 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9895 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9897 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9899 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9901 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9902 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9904 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9908 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9910 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9911 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9914 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9915 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9916 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9917 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9918 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9919 removed from NACK list due to max retries.
+(video_receive_stream2.cc:714): No decodable frame in 3000 ms, requesting keyframe.
+(nack_module.cc:324): Sequence number 9921 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9922 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9923 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9924 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9925 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9926 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9927 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9929 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9930 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9931 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9932 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9934 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9935 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9936 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9938 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9939 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9942 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9943 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9944 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9945 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9952 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9954 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9956 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9957 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9958 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9959 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9961 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9962 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9964 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9965 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9966 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9967 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9968 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9969 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9970 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9971 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9972 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9973 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9974 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9977 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9978 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9979 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9981 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9982 removed from NACK list due to max retries.
+(nack_module.cc:324): Sequence number 9983 removed from NACK list due to max retries.
+(network.cc:885): Connect failed with 99
+(remote_ntp_time_estimator.cc:86): RTP timestamp: 2343669957 in NTP clock: 3911420144336 estimated time in receiver NTP clock: 3911420144182
+(rtp_rtcp_impl.cc:133): Process: Timeout: No RTCP RR received.
+(rtp_rtcp_impl.cc:135): Process: Timeout: No increase in RTCP RR extended highest sequence number.
+(video_receive_stream2.cc:714): No decodable frame in 3000 ms, requesting keyframe.
+(network.cc:885): Connect failed with 99
+(rtp_video_stream_receiver.cc:682): Packet received on SSRC: 3460464873 with payload type: 125, timestamp: 2343861207, sequence number: 10054, arrival time: 1702431346471, abs send time: 1480065
+(network.cc:885): Connect failed with 99
+(remote_ntp_time_estimator.cc:86): RTP timestamp: 512321300 in NTP clock: 3911420145873 estimated time in receiver NTP clock: 3911420145869
+(rtp_streams_synchronizer2.cc:119): Sync info stats: 2056852, {ssrc: 375751647, cur_delay_ms: 1844} {ssrc: 3460464873, cur_delay_ms: 1054} {relative_delay_ms: 17} 
+(rtp_streams_synchronizer2.cc:143): Sync delay stats: 2056852, {ssrc: 375751647, target_delay_ms: 0} {ssrc: 3460464873, target_delay_ms: 1134} 
+(network.cc:885): Connect failed with 99
+(network.cc:885): Connect failed with 99
+(network.cc:885): Connect failed with 99
+(remote_ntp_time_estimator.cc:86): RTP timestamp: 2344569867 in NTP clock: 3911420154335 estimated time in receiver NTP clock: 3911420154276
+(conductor.cc:365): Received unknown message. BYE
+(bitrate_allocator.cc:523): UpdateAllocationLimits : total_requested_min_bitrate: 0 bps, total_requested_padding_bitrate: 0 bps, total_requested_max_bitrate: 0 bps
+(webrtc_voice_engine.cc:1959): SetOutputVolume() to 0 for recv stream with ssrc 375751647
+(webrtc_video_engine.cc:1232): SetVideoSend (ssrc= 402868024, options: nullptr, source = nullptr)
+(webrtc_video_engine.cc:1528): SetSink: ssrc:3460464873 nullptr
+(channel.cc:517): Channel disabled
+(video_send_stream.cc:177): VideoSendStream::Stop
+(channel.cc:965): Changing video state, send=0
+(video_send_stream_impl.cc:386): VideoSendStream::Stop
+(rtp_rtcp_impl.cc:312): Failed to send RTCP BYE
+(video_stream_encoder.cc:1698): Video suspend state changed to: suspended
+(video_send_stream.cc:177): VideoSendStream::Stop
+(video_send_stream_impl.cc:386): VideoSendStream::Stop
+(video_send_stream_impl.cc:386): VideoSendStream::Stop
+(video_send_stream_impl.cc:311): ~VideoSendStreamInternal: {encoder_settings: { experiment_cpu_load_estimator: off}}, rtp: {ssrcs: [402868024], rids: [], mid: '1', rtcp_mode: RtcpMode::kReducedSize, max_packet_size: 1200, extmap-allow-mixed: false, extensions: [{uri: http://tools.ietf.org/html/draft-ietf-avtext-framemarking-07, id: 8}, {uri: http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01, id: 3}, {uri: http://www.webrtc.org/experiments/rtp-hdrext/abs-send-time, id: 2}, {uri: http://www.webrtc.org/experiments/rtp-hdrext/color-space, id: 9}, {uri: http://www.webrtc.org/experiments/rtp-hdrext/playout-delay, id: 12}, {uri: http://www.webrtc.org/experiments/rtp-hdrext/video-content-type, id: 11}, {uri: http://www.webrtc.org/experiments/rtp-hdrext/video-timing, id: 7}, {uri: urn:3gpp:video-orientation, id: 13}, {uri: urn:ietf:params:rtp-hdrext:sdes:mid, id: 4}, {uri: urn:ietf:params:rtp-hdrext:sdes:repaired-rtp-stream-id, id: 6}, {uri: urn:ietf:params:rtp-hdrext:sdes:rtp-stream-id, id: 5}], lntf: {enabled: false}, nack: {rtp_history_ms: 1000}, ulpfec: {ulpfec_payload_type: 124, red_payload_type: 125, red_rtx_payload_type: 122}, payload_name: VP8, payload_type: 96, raw_payload: false, flexfec: {payload_type: -1, ssrc: 0, protected_media_ssrcs: []}, rtx: {ssrcs: [1070188671], payload_type: 97}, c_name: eLsGuSI+9InfGHid}, rtcp_report_interval_ms: 1000, send_transport: (Transport), render_delay_ms: 0, target_delay_ms: 0, suspend_below_min_bitrate: off}
+(send_statistics_proxy.cc:667): Frames encoded 0
+WebRTC.Video.DroppedFrames.Capturer 0
+WebRTC.Video.DroppedFrames.EncoderQueue 0
+WebRTC.Video.DroppedFrames.Encoder 0
+WebRTC.Video.DroppedFrames.Ratelimiter 0
+WebRTC.Video.DroppedFrames.CongestionWindow 0
+(video_receive_stream2.cc:270): ~VideoReceiveStream2: {decoders: [{payload_type: 96, payload_name: VP8, codec_params: {}}, {payload_type: 98, payload_name: VP9, codec_params: {profile-id: 0}}, {payload_type: 100, payload_name: VP9, codec_params: {profile-id: 2}}, {payload_type: 127, payload_name: AV1X, codec_params: {}}], rtp: {remote_ssrc: 3460464873, local_ssrc: 402868024, rtcp_mode: RtcpMode::kReducedSize, rtcp_xr: {receiver_reference_time_report: off}, transport_cc: on, lntf: {enabled: false}, nack: {rtp_history_ms: 1000}, ulpfec_payload_type: 124, red_type: 125, rtx_ssrc: 2592369340, rtx_payload_types: {97 (pt) -> 96 (apt), 99 (pt) -> 98 (apt), 101 (pt) -> 100 (apt), 122 (pt) -> 125 (apt), 123 (pt) -> 127 (apt), }, raw_payload_types: {}, extensions: [{uri: http://tools.ietf.org/html/draft-ietf-avtext-framemarking-07, id: 8}, {uri: http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01, id: 3}, {uri: http://www.webrtc.org/experiments/rtp-hdrext/abs-send-time, id: 2}, {uri: http://www.webrtc.org/experiments/rtp-hdrext/color-space, id: 9}, {uri: http://www.webrtc.org/experiments/rtp-hdrext/playout-delay, id: 12}, {uri: http://www.webrtc.org/experiments/rtp-hdrext/video-content-type, id: 11}, {uri: http://www.webrtc.org/experiments/rtp-hdrext/video-timing, id: 7}, {uri: urn:3gpp:video-orientation, id: 13}, {uri: urn:ietf:params:rtp-hdrext:sdes:mid, id: 4}, {uri: urn:ietf:params:rtp-hdrext:sdes:repaired-rtp-stream-id, id: 6}, {uri: urn:ietf:params:rtp-hdrext:sdes:rtp-stream-id, id: 5}, {uri: urn:ietf:params:rtp-hdrext:toffset, id: 14}]}, renderer: (renderer), render_delay_ms: 10, sync_group: stream_id, target_delay_ms: 0}
+(receive_statistics_proxy2.cc:495): WebRTC.Video.ReceiveStreamLifetimeInSeconds 60
+Frames decoded 803
+WebRTC.Video.DroppedFrames.Receiver 213
+WebRTC.Video.ReceivedPacketsLostInPercent 13
+WebRTC.Video.DecodedFramesPerSecond 14
+WebRTC.Video.RenderFramesPerSecond 13
+WebRTC.Video.AVSyncOffsetInMs 539
+WebRTC.Video.RtpToNtpFreqOffsetInKhz periodic_samples:1, {min:0, avg:0, max:0}
+WebRTC.Video.KeyFramesReceivedInPermille 3
+WebRTC.Video.Decoded.Vp8.Qp 102
+WebRTC.Video.DecodeTimeInMs 1
+WebRTC.Video.JitterBufferDelayInMs 88
+WebRTC.Video.TargetDelayInMs 897
+WebRTC.Video.CurrentDelayInMs 711
+WebRTC.Video.EndToEndDelayInMs 1784
+WebRTC.Video.EndToEndDelayMaxInMs 6011
+WebRTC.Video.InterframeDelayInMs 73
+WebRTC.Video.InterframeDelayMaxInMs 10278
+WebRTC.Video.InterframeDelay95PercentileInMs 103
+WebRTC.Video.ReceivedWidthInPixels 320
+WebRTC.Video.ReceivedHeightInPixels 180
+WebRTC.Video.EndToEndDelayInMs.S0 1784
+WebRTC.Video.EndToEndDelayMaxInMs.S0 6011
+WebRTC.Video.InterframeDelayInMs.S0 73
+WebRTC.Video.InterframeDelayMaxInMs.S0 10278
+WebRTC.Video.InterframeDelay95PercentileInMs.S0 103
+WebRTC.Video.ReceivedWidthInPixels.S0 320
+WebRTC.Video.ReceivedHeightInPixels.S0 180
+WebRTC.Video.MediaBitrateReceivedInKbps.S0 288
+WebRTC.Video.KeyFramesReceivedInPermille.S0 3
+WebRTC.Video.Decoded.Vp8.Qp.S0 102
+WebRTC.Video.MediaBitrateReceivedInKbps 277
+
+(video_quality_observer2.cc:134): WebRTC.Video.MeanTimeBetweenFreezesMs 4892
+WebRTC.Video.MeanFreezeDurationMs 2837
+WebRTC.Video.TimeInHdPercentage 0
+WebRTC.Video.TimeInBlockyVideoPercentage 65
+WebRTC.Video.NumberResolutionDownswitchesPerMinute 0
+WebRTC.Video.NumberFreezesPerMinute 7
+WebRTC.Video.HarmonicFrameRate 0
+
+(video_render_frames.cc:47): WebRTC.Video.DroppedFrames.RenderQueue 7
+(channel.cc:159): Destroyed channel: 1
+(openssl_stream_adapter.cc:912): Cleanup
+(dtls_transport.cc:682): DtlsTransport[0|1|_W]: DTLS transport closed by remote
+(jsep_transport_controller.cc:1344):  Transport 0 writability changed to 0.
+(channel.cc:550): Channel not writable (0)
+(srtp_transport.cc:366): The params in SRTP transport are reset.
+(channel.cc:816): Changing voice state, recv=1 send=1
+(channel.cc:517): Channel disabled
+(channel.cc:816): Changing voice state, recv=0 send=0
+(webrtc_voice_engine.cc:1833): RemoveSendStream: 6757796
+(audio_send_stream.cc:176): ~AudioSendStream: 6757796
+(webrtc_voice_engine.cc:1905): RemoveRecvStream: 375751647
+(call.cc:1056): UpdateAggregateNetworkState: aggregate_state change to down
+(audio_receive_stream.cc:144): ~AudioReceiveStream: 375751647
+(pacing_controller.cc:155): PacedSender paused.
+(control_handler.cc:78): Bitrate estimate state changed, BWE: 300 kbps.
+(bitrate_allocator.cc:394): AlphaRTC: Current BWE 0
+(channel.cc:159): Destroyed channel: 0
+(peer_connection.cc:1077): Session: 3184752886899679765 is destroyed.
+(openssl_stream_adapter.cc:912): Cleanup
+(call.cc:552): WebRTC.Call.EstimatedSendBitrateInKbps, periodic_samples:29, {min:300, avg:300, max:300}
+(call.cc:560): WebRTC.Call.PacerBitrateInKbps, periodic_samples:29, {min:300, avg:300, max:300}
+(call.cc:582): WebRTC.Call.VideoBitrateReceivedInBps, periodic_samples:29, {min:70736, avg:311112, max:587344}
+(call.cc:590): WebRTC.Call.AudioBitrateReceivedInBps, periodic_samples:29, {min:17632, avg:37544, max:57016}
+(call.cc:598): WebRTC.Call.RtcpBitrateReceivedInBps, periodic_samples:29, {min:64, avg:632, max:1312}
+(call.cc:606): WebRTC.Call.BitrateReceivedInBps, periodic_samples:29, {min:90600, avg:348544, max:628168}
+(paced_sender.cc:176): ProcessThreadAttached 0x0
+(paced_sender.cc:176): ProcessThreadAttached 0x0
+(dtmf_sender.cc:225): The Dtmf provider is deleted. Clear the sending queue.
+(webrtc_video_engine.cc:576): WebRtcVideoEngine::~WebRtcVideoEngine
+(webrtc_voice_engine.cc:214): WebRtcVoiceEngine::~WebRtcVoiceEngine
